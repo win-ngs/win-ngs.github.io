@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>win-ngs — NGS Analysis Tools for Windows</title>
+  <meta name="description" content="A portal site for Next-Generation Sequencing (NGS) analysis tools that run on Windows. Original software, self-compiled binaries, and curated links to external tools." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>win-ngs</h1>
+      <p class="tagline">A portal for NGS analysis tools that run on Windows</p>
+      <nav class="site-nav">
+        <a href="#own">Original Software</a>
+        <a href="#binaries">Compiled Binaries</a>
+        <a href="#external">External Tools</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/win-ngs/win-ngs.github.io" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="intro">
+      <p>
+        Most NGS (Next-Generation Sequencing) analysis tools are built with Linux or macOS in mind,
+        and information about running them natively on Windows is scattered. This site collects
+        <strong>tools that work on Windows out of the box</strong>,
+        <strong>binaries we compiled ourselves</strong>, and
+        <strong>links to useful external tools</strong> in one place.
+      </p>
+    </section>
+
+    <!-- ============ Original Software ============ -->
+    <section id="own" class="card-section">
+      <h2>Original Software</h2>
+      <p class="section-lead">Tools developed in-house. Please file bug reports and feature requests on GitHub.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>(Coming Soon) Tool Name</h3>
+          <p class="card-desc">Short description goes here. What the tool is for, what input it takes, and what output it produces.</p>
+          <ul class="meta">
+            <li><span class="meta-key">Language:</span> -</li>
+            <li><span class="meta-key">License:</span> -</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="#">Download</a>
+            <a class="btn" href="#">GitHub</a>
+            <a class="btn" href="#">Docs</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Compiled Binaries ============ -->
+    <section id="binaries" class="card-section">
+      <h2>Compiled Binaries</h2>
+      <p class="section-lead">
+        Open-source NGS tools built for Windows. Build environment, dependencies,
+        and hash values are listed alongside each binary whenever possible.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>(Example) samtools-x.y.z-win64</h3>
+          <p class="card-desc">The de facto standard tool for SAM/BAM/CRAM manipulation. Built for Windows with MSYS2 / MinGW-w64.</p>
+          <ul class="meta">
+            <li><span class="meta-key">Built with:</span> MSYS2 / MinGW-w64</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
+            <li><span class="meta-key">License:</span> Inherits upstream</li>
+            <li><span class="meta-key">SHA256:</span> <code>-</code></li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="#">Download</a>
+            <a class="btn" href="#">Build Notes</a>
+            <a class="btn" href="#">Upstream Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>(Example) bcftools-x.y.z-win64</h3>
+          <p class="card-desc">VCF/BCF manipulation, filtering, and variant calling.</p>
+          <ul class="meta">
+            <li><span class="meta-key">Built with:</span> -</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
+            <li><span class="meta-key">License:</span> Inherits upstream</li>
+            <li><span class="meta-key">SHA256:</span> <code>-</code></li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="#">Download</a>
+            <a class="btn" href="#">Build Notes</a>
+            <a class="btn" href="#">Upstream Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ External Tools ============ -->
+    <section id="external" class="card-section">
+      <h2>External Tools</h2>
+      <p class="section-lead">
+        Tools that either run on Windows out of the box or ship official Windows builds.
+        WSL-only tools are tagged separately so they're easy to spot.
+      </p>
+
+      <h3 class="subcat">QC / Preprocessing</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">
+          <span class="link-title">FastQC</span>
+          <span class="link-desc">Read quality checks. Java-based; runs on Windows.</span>
+        </a>
+        <a class="link-item" href="https://github.com/OpenGene/fastp" target="_blank" rel="noopener">
+          <span class="link-title">fastp</span>
+          <span class="link-desc">Fast read trimming and QC. <span class="tag">Build/WSL</span></span>
+        </a>
+        <a class="link-item" href="http://www.usadellab.org/cms/?page=trimmomatic" target="_blank" rel="noopener">
+          <span class="link-title">Trimmomatic</span>
+          <span class="link-desc">Adapter and low-quality base trimming. Java-based.</span>
+        </a>
+      </div>
+
+      <h3 class="subcat">Alignment</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://github.com/lh3/minimap2" target="_blank" rel="noopener">
+          <span class="link-title">minimap2</span>
+          <span class="link-desc">Fast aligner for both long and short reads. <span class="tag">Build/WSL</span></span>
+        </a>
+        <a class="link-item" href="https://github.com/BenLangmead/bowtie2" target="_blank" rel="noopener">
+          <span class="link-title">Bowtie2</span>
+          <span class="link-desc">Short-read aligner with official Windows binaries.</span>
+        </a>
+        <a class="link-item" href="https://github.com/lh3/bwa" target="_blank" rel="noopener">
+          <span class="link-title">BWA</span>
+          <span class="link-desc">Classic short-read aligner. <span class="tag">Build/WSL</span></span>
+        </a>
+      </div>
+
+      <h3 class="subcat">SAM/BAM/VCF Manipulation</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://www.htslib.org/" target="_blank" rel="noopener">
+          <span class="link-title">samtools / bcftools / htslib</span>
+          <span class="link-desc">The de facto standard NGS data toolkit. <span class="tag">Build/WSL</span></span>
+        </a>
+        <a class="link-item" href="https://broadinstitute.github.io/picard/" target="_blank" rel="noopener">
+          <span class="link-title">Picard Tools</span>
+          <span class="link-desc">SAM/BAM manipulation and metrics. Java-based.</span>
+        </a>
+      </div>
+
+      <h3 class="subcat">Variant Calling / Annotation</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://gatk.broadinstitute.org/" target="_blank" rel="noopener">
+          <span class="link-title">GATK</span>
+          <span class="link-desc">The go-to variant calling toolkit. Java core with native deps.</span>
+        </a>
+        <a class="link-item" href="https://pcingola.github.io/SnpEff/" target="_blank" rel="noopener">
+          <span class="link-title">SnpEff / SnpSift</span>
+          <span class="link-desc">Variant annotation. Java-based.</span>
+        </a>
+      </div>
+
+      <h3 class="subcat">Viewers / Visualization</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://igv.org/" target="_blank" rel="noopener">
+          <span class="link-title">IGV (Integrative Genomics Viewer)</span>
+          <span class="link-desc">Visualizer for BAM/VCF/BED. Windows installer available.</span>
+        </a>
+        <a class="link-item" href="https://ics.hutton.ac.uk/tablet/" target="_blank" rel="noopener">
+          <span class="link-title">Tablet</span>
+          <span class="link-desc">Lightweight read viewer. Windows-friendly.</span>
+        </a>
+      </div>
+
+      <h3 class="subcat">Build Environments / Runtimes</h3>
+      <div class="link-list">
+        <a class="link-item" href="https://www.msys2.org/" target="_blank" rel="noopener">
+          <span class="link-title">MSYS2</span>
+          <span class="link-desc">Build environment on Windows. Many NGS tools compile here.</span>
+        </a>
+        <a class="link-item" href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener">
+          <span class="link-title">WSL2</span>
+          <span class="link-desc">The practical answer for running Linux-only tools.</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section id="about" class="card-section">
+      <h2>About this site</h2>
+      <p>
+        The source for this site is managed on
+        <a href="https://github.com/win-ngs/win-ngs.github.io" target="_blank" rel="noopener">GitHub</a>.
+        Please use issues and pull requests for additions and corrections to the tool listings.
+      </p>
+      <p>
+        Distributed binaries are provided in accordance with the respective upstream licenses.
+        Please review the upstream license before using any binary listed here.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> win-ngs &mdash; <a href="https://github.com/win-ngs/win-ngs.github.io" target="_blank" rel="noopener">Source on GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
