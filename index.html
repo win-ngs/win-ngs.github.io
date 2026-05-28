@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>win-ngs — NGS Analysis Tools for Windows</title>
+  <title>Win-NGS — NGS Analysis Tools for Windows</title>
   <meta name="description" content="A portal site for Next-Generation Sequencing (NGS) analysis tools that run on Windows. Original software, self-compiled binaries, and curated links to external tools." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1>win-ngs</h1>
+      <h1>Win-NGS</h1>
       <p class="tagline">A portal for NGS analysis tools that run on Windows</p>
       <nav class="site-nav">
         <a href="#rnaseq">Basic RNA-seq</a>
@@ -45,7 +45,7 @@
 
       <div class="cards">
         <article class="card">
-          <h3><a class="card-title-link" href="https://github.com/win-ngs/falco-windows-build" target="_blank" rel="noopener">Falco 1.3.0 (Windows build)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/falco-windows-build" target="_blank" rel="noopener">Falco 1.3.0 (Our Windows build)</a></h3>
           <p class="card-desc">
             Drop-in, faster reimplementation of FastQC. Quality control for FASTQ reads &mdash; the typical first step of an RNA-seq workflow.
           </p>
@@ -53,18 +53,15 @@
             <li><span class="meta-key">Role:</span> Read QC</li>
             <li><span class="meta-key">Upstream:</span> <a href="https://github.com/smithlabcode/falco" target="_blank" rel="noopener">smithlabcode/falco</a></li>
             <li><span class="meta-key">Built with:</span> MSYS2 (MSYS / UCRT64)</li>
-            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
-            <li><span class="meta-key">License:</span> GPL-3.0 (upstream)</li>
           </ul>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/falco-windows-build/releases/tag/v1.3.0-windows" target="_blank" rel="noopener">Download v1.3.0</a>
             <a class="btn" href="https://github.com/win-ngs/falco-windows-build" target="_blank" rel="noopener">Build Repo</a>
-            <a class="btn" href="https://github.com/smithlabcode/falco" target="_blank" rel="noopener">Upstream</a>
           </div>
         </article>
 
         <article class="card">
-          <h3><a class="card-title-link" href="https://github.com/win-ngs/star-windows-build" target="_blank" rel="noopener">STAR 2.7.11b (Windows build)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/star-windows-build" target="_blank" rel="noopener">STAR 2.7.11b (Our Windows build)</a></h3>
           <p class="card-desc">
             Spliced Transcripts Alignment to a Reference. The standard splice-aware aligner for RNA-seq short reads.
           </p>
@@ -72,13 +69,31 @@
             <li><span class="meta-key">Role:</span> Spliced alignment</li>
             <li><span class="meta-key">Upstream:</span> <a href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">alexdobin/STAR</a></li>
             <li><span class="meta-key">Built with:</span> MSYS2 (MSYS)</li>
-            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
-            <li><span class="meta-key">License:</span> MIT (upstream)</li>
           </ul>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/star-windows-build/releases" target="_blank" rel="noopener">Download v2.7.11b</a>
             <a class="btn" href="https://github.com/win-ngs/star-windows-build" target="_blank" rel="noopener">Build Repo</a>
-            <a class="btn" href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">Upstream</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3><a class="card-title-link" href="https://subread.sourceforge.net/" target="_blank" rel="noopener">featureCounts (Subread 2.1.1)</a></h3>
+          <p class="card-badges">
+            <span class="badge-good" title="The upstream project officially supports Windows">
+              Official Windows support 👍
+            </span>
+          </p>
+          <p class="card-desc">
+            Read summarization program for counting mapped reads per genomic feature (genes, exons, etc.).
+            Part of the Subread package.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Read counting / quantification</li>
+            <li><span class="meta-key">Official site:</span> <a href="https://subread.sourceforge.net/" target="_blank" rel="noopener">subread</a></li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://sourceforge.net/projects/subread/files/subread-2.1.1/subread-2.1.1-Windows-x86_64.zip/download" target="_blank" rel="noopener">Download v2.1.1</a>
+            <a class="btn" href="https://subread.sourceforge.net/featureCounts.html" target="_blank" rel="noopener">Docs</a>
           </div>
         </article>
       </div>
