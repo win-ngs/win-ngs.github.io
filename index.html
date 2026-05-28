@@ -13,6 +13,7 @@
       <h1>win-ngs</h1>
       <p class="tagline">A portal for NGS analysis tools that run on Windows</p>
       <nav class="site-nav">
+        <a href="#rnaseq">Basic RNA-seq</a>
         <a href="#own">Original Software</a>
         <a href="#binaries">Compiled Binaries</a>
         <a href="#external">External Tools</a>
@@ -32,6 +33,55 @@
         <strong>binaries we compiled ourselves</strong>, and
         <strong>links to useful external tools</strong> in one place.
       </p>
+    </section>
+
+    <!-- ============ Basic RNA-seq tools ============ -->
+    <section id="rnaseq" class="card-section">
+      <h2>Basic RNA-seq Tools</h2>
+      <p class="section-lead">
+        A minimal toolchain for running RNA-seq analysis natively on Windows.
+        Self-built binaries, ready to run without WSL.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Falco 1.3.0 (Windows build)</h3>
+          <p class="card-desc">
+            Drop-in, faster reimplementation of FastQC. Quality control for FASTQ reads &mdash; the typical first step of an RNA-seq workflow.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Read QC</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/smithlabcode/falco" target="_blank" rel="noopener">smithlabcode/falco</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (MSYS / UCRT64)</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> GPL-3.0 (upstream)</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/falco-windows-build/releases/tag/v1.3.0-windows" target="_blank" rel="noopener">Download v1.3.0</a>
+            <a class="btn" href="https://github.com/win-ngs/falco-windows-build" target="_blank" rel="noopener">Build Repo</a>
+            <a class="btn" href="https://github.com/smithlabcode/falco" target="_blank" rel="noopener">Upstream</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>STAR 2.7.11b (Windows build)</h3>
+          <p class="card-desc">
+            Spliced Transcripts Alignment to a Reference. The standard splice-aware aligner for RNA-seq short reads. Includes <code>STAR.exe</code> and <code>STARlong.exe</code>.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Spliced alignment</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">alexdobin/STAR</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (MSYS)</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT (upstream)</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/star-windows-build/releases" target="_blank" rel="noopener">Download v2.7.11b</a>
+            <a class="btn" href="https://github.com/win-ngs/star-windows-build" target="_blank" rel="noopener">Build Repo</a>
+            <a class="btn" href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">Upstream</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- ============ Original Software ============ -->
