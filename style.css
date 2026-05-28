@@ -138,6 +138,14 @@ code {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
 }
+.card-title-link {
+  color: var(--fg);
+  text-decoration: none;
+}
+.card-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
 .card-desc {
   color: var(--fg);
   margin: 0 0 0.8rem;
