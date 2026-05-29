@@ -1,4 +1,6 @@
-# win-ngs
+![Win-NGS banner](assets/win-ngs-banner.jpg)
+
+# Win-NGS
 
 A portal site for **NGS (Next-Generation Sequencing) analysis tools that run on Windows**.
 
