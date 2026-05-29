@@ -23,47 +23,6 @@ Windows is scattered. This site collects in one place:
 
 See the [portal site](https://win-ngs.github.io/) for the full list.
 
-## Repository layout
-
-```
-.
-├── index.html   # Main portal page
-├── style.css    # Styling (dark/light mode via prefers-color-scheme)
-└── README.md
-```
-
-This is a plain static site. No build step, no Jekyll, no dependencies.
-GitHub Pages serves `index.html` directly.
-
-## Local preview
-
-Just open `index.html` in a browser. For a proper local server:
-
-```powershell
-python -m http.server 8000
-```
-
-Then visit http://localhost:8000/.
-
-## Contributing
-
-Additions, corrections, and broken-link reports are welcome via
-[Issues](https://github.com/win-ngs/win-ngs.github.io/issues) and
-[Pull Requests](https://github.com/win-ngs/win-ngs.github.io/pulls).
-
-When adding a tool, please include:
-
-- **Role** (QC, alignment, variant calling, etc.)
-- **Upstream link** to the original project
-- **Build environment** if it's a custom build (e.g. MSYS2 MSYS / UCRT64)
-- **License** (inherited from upstream)
-- **SHA256** of the distributed archive if applicable
-
-## Related repositories
-
-- [win-ngs/falco-windows-build](https://github.com/win-ngs/falco-windows-build) — Falco Windows build
-- [win-ngs/star-windows-build](https://github.com/win-ngs/star-windows-build) — STAR Windows build
-
 ## License
 
 The portal site (this repository) is provided as-is for reference.
