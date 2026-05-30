@@ -15,7 +15,7 @@
       <nav class="site-nav">
         <a href="#rnaseq">Basic RNA-seq</a>
         <a href="#own">Original Software</a>
-        <a href="#binaries">Compiled Binaries</a>
+        <a href="#binaries">More Windows Builds</a>
         <a href="#external">External Tools</a>
         <a href="#about">About</a>
         <a href="https://github.com/win-ngs/win-ngs.github.io" target="_blank" rel="noopener">GitHub</a>
@@ -122,44 +122,135 @@
       </div>
     </section>
 
-    <!-- ============ Compiled Binaries ============ -->
+    <!-- ============ More Windows Builds & Bundles ============ -->
     <section id="binaries" class="card-section">
-      <h2>Compiled Binaries</h2>
+      <h2>More Windows Builds &amp; Bundles</h2>
       <p class="section-lead">
-        Open-source NGS tools built for Windows. Build environment, dependencies,
-        and hash values are listed alongside each binary whenever possible.
+        Additional NGS tools we have built or redistributed for Windows, grouped by function.
+        "Build" entries are compiled from source with MSYS2; "Bundle" entries repackage
+        existing MSYS2 binaries together with the runtime DLLs needed to run standalone.
       </p>
 
+      <h3 class="subcat">Read QC / Preprocessing</h3>
       <div class="cards">
         <article class="card">
-          <h3>(Example) samtools-x.y.z-win64</h3>
-          <p class="card-desc">The de facto standard tool for SAM/BAM/CRAM manipulation. Built for Windows with MSYS2 / MinGW-w64.</p>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/fastp-windows-build" target="_blank" rel="noopener">fastp 1.3.3 (Our Windows build)</a></h3>
+          <p class="card-desc">
+            Fast all-in-one FASTQ preprocessor &mdash; quality filtering, adapter trimming,
+            length filtering, and per-read reports in a single pass.
+          </p>
           <ul class="meta">
-            <li><span class="meta-key">Built with:</span> MSYS2 / MinGW-w64</li>
-            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
-            <li><span class="meta-key">License:</span> Inherits upstream</li>
-            <li><span class="meta-key">SHA256:</span> <code>-</code></li>
+            <li><span class="meta-key">Role:</span> QC / preprocessing</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/OpenGene/fastp" target="_blank" rel="noopener">OpenGene/fastp</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (UCRT64)</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT (upstream)</li>
           </ul>
           <div class="card-actions">
-            <a class="btn btn-primary" href="#">Download</a>
-            <a class="btn" href="#">Build Notes</a>
-            <a class="btn" href="#">Upstream Repo</a>
+            <a class="btn btn-primary" href="https://github.com/win-ngs/fastp-windows-build/releases/tag/v1.3.3-windows" target="_blank" rel="noopener">Download v1.3.3</a>
+            <a class="btn" href="https://github.com/win-ngs/fastp-windows-build" target="_blank" rel="noopener">Build Repo</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subcat">Aligners</h3>
+      <div class="cards">
+        <article class="card">
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/minimap2-windows-build" target="_blank" rel="noopener">minimap2 2.31 (Our Windows build)</a></h3>
+          <p class="card-desc">
+            Versatile pairwise sequence aligner. The standard choice for long-read mapping
+            (PacBio, ONT) and a fast option for short-read alignment.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Long / short-read alignment</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/lh3/minimap2" target="_blank" rel="noopener">lh3/minimap2</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (UCRT64)</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT (upstream)</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/minimap2-windows-build/releases/tag/v2.31-r1302" target="_blank" rel="noopener">Download v2.31</a>
+            <a class="btn" href="https://github.com/win-ngs/minimap2-windows-build" target="_blank" rel="noopener">Build Repo</a>
           </div>
         </article>
 
         <article class="card">
-          <h3>(Example) bcftools-x.y.z-win64</h3>
-          <p class="card-desc">VCF/BCF manipulation, filtering, and variant calling.</p>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/bwa-mem2-windows-build" target="_blank" rel="noopener">BWA-MEM2 2.3 (Our Windows build)</a></h3>
+          <p class="card-desc">
+            Faster reimplementation of BWA-MEM, the de facto standard short-read aligner.
+            Suited for DNA-seq, ChIP-seq, and ATAC-seq workflows on Windows.
+          </p>
           <ul class="meta">
-            <li><span class="meta-key">Built with:</span> -</li>
-            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
-            <li><span class="meta-key">License:</span> Inherits upstream</li>
-            <li><span class="meta-key">SHA256:</span> <code>-</code></li>
+            <li><span class="meta-key">Role:</span> Short-read alignment</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/bwa-mem2/bwa-mem2" target="_blank" rel="noopener">bwa-mem2/bwa-mem2</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (MSYS)</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT (upstream)</li>
           </ul>
           <div class="card-actions">
-            <a class="btn btn-primary" href="#">Download</a>
-            <a class="btn" href="#">Build Notes</a>
-            <a class="btn" href="#">Upstream Repo</a>
+            <a class="btn btn-primary" href="https://github.com/win-ngs/bwa-mem2-windows-build/releases/tag/v2.3-windows-msys" target="_blank" rel="noopener">Download v2.3</a>
+            <a class="btn" href="https://github.com/win-ngs/bwa-mem2-windows-build" target="_blank" rel="noopener">Build Repo</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subcat">SAM / BAM / VCF Utilities</h3>
+      <div class="cards">
+        <article class="card">
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">samtools 1.23.1 (Windows bundle)</a></h3>
+          <p class="card-desc">
+            SAM/BAM/CRAM file manipulation &mdash; sorting, indexing, viewing, filtering.
+            Standalone bundle including the required runtime DLLs.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> SAM / BAM / CRAM utilities</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://www.htslib.org/" target="_blank" rel="noopener">htslib.org</a></li>
+            <li><span class="meta-key">Source:</span> Redistributed from MSYS2 UCRT64</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT / Expat</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/samtools-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
+            <a class="btn" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">bcftools 1.23.1 (Windows bundle)</a></h3>
+          <p class="card-desc">
+            VCF/BCF manipulation, filtering, and variant calling. Includes plugins and the
+            runtime DLLs needed to run standalone on Windows.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> VCF / BCF utilities</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://www.htslib.org/" target="_blank" rel="noopener">htslib.org</a></li>
+            <li><span class="meta-key">Source:</span> Redistributed from MSYS2 UCRT64</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT / Expat</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/bcftools-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
+            <a class="btn" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">htslib 1.23.1 (Windows bundle)</a></h3>
+          <p class="card-desc">
+            Core C library for high-throughput sequencing data formats (SAM/BAM/CRAM/VCF/BCF).
+            Ships the CLI utilities <code>bgzip</code>, <code>tabix</code>, <code>htsfile</code>,
+            and <code>annot-tsv</code>.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Core library &amp; CLI utilities</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://www.htslib.org/" target="_blank" rel="noopener">htslib.org</a></li>
+            <li><span class="meta-key">Source:</span> Redistributed from MSYS2 UCRT64</li>
+            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x86_64)</li>
+            <li><span class="meta-key">License:</span> MIT / Expat</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/htslib-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
+            <a class="btn" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
           </div>
         </article>
       </div>
