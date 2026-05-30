@@ -14,7 +14,6 @@
       <p class="tagline">A portal for NGS analysis tools that run on Windows</p>
       <nav class="site-nav">
         <a href="#rnaseq">Basic RNA-seq</a>
-        <a href="#own">Original Software</a>
         <a href="#binaries">More Windows Builds</a>
         <a href="#external">External Tools</a>
         <a href="#about">About</a>
@@ -77,7 +76,7 @@
         </article>
 
         <article class="card">
-          <h3><a class="card-title-link" href="https://subread.sourceforge.net/" target="_blank" rel="noopener">featureCounts (Subread 2.1.1)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/featurecounts-windows-exe" target="_blank" rel="noopener">featureCounts (redistribution)</a></h3>
           <p class="card-badges">
             <span class="badge-good" title="The upstream project officially supports Windows">
               Official Windows support 👍
@@ -85,38 +84,16 @@
           </p>
           <p class="card-desc">
             Read summarization program for counting mapped reads per genomic feature (genes, exons, etc.).
-            Part of the Subread package.
+            Part of the Subread package; this is a small redistribution containing only
+            <code>featureCounts.exe</code>.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Read counting / quantification</li>
             <li><span class="meta-key">Official site:</span> <a href="https://subread.sourceforge.net/" target="_blank" rel="noopener">Subread</a></li>
           </ul>
           <div class="card-actions">
-            <a class="btn btn-primary" href="https://sourceforge.net/projects/subread/files/subread-2.1.1/subread-2.1.1-Windows-x86_64.zip/download" target="_blank" rel="noopener">Download v2.1.1</a>
+            <a class="btn btn-primary" href="https://github.com/win-ngs/featurecounts-windows-exe/releases/download/v2.1.1-windows-x86_64/featureCounts-2.1.1-windows-x86_64.zip" target="_blank" rel="noopener">Download v2.1.1</a>
             <a class="btn" href="https://subread.sourceforge.net/featureCounts.html" target="_blank" rel="noopener">Docs</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ Original Software ============ -->
-    <section id="own" class="card-section">
-      <h2>Original Software</h2>
-      <p class="section-lead">Tools developed in-house. Please file bug reports and feature requests on GitHub.</p>
-
-      <div class="cards">
-        <article class="card">
-          <h3>(Coming Soon) Tool Name</h3>
-          <p class="card-desc">Short description goes here. What the tool is for, what input it takes, and what output it produces.</p>
-          <ul class="meta">
-            <li><span class="meta-key">Language:</span> -</li>
-            <li><span class="meta-key">License:</span> -</li>
-            <li><span class="meta-key">Supported OS:</span> Windows 10/11 (x64)</li>
-          </ul>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="#">Download</a>
-            <a class="btn" href="#">GitHub</a>
-            <a class="btn" href="#">Docs</a>
           </div>
         </article>
       </div>
@@ -127,7 +104,7 @@
       <h2>More Windows Builds &amp; Bundles</h2>
       <p class="section-lead">
         Additional NGS tools we have built or redistributed for Windows, grouped by function.
-        "Build" entries are compiled from source with MSYS2; "Bundle" entries repackage
+        "Build" entries are compiled from source with MSYS2; "Redistribution" entries repackage
         existing MSYS2 binaries together with the runtime DLLs needed to run standalone.
       </p>
 
@@ -197,7 +174,7 @@
       <h3 class="subcat">SAM / BAM / VCF Utilities</h3>
       <div class="cards">
         <article class="card">
-          <h3><a class="card-title-link" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">samtools 1.23.1 (Windows bundle)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">samtools 1.23.1 (redistribution)</a></h3>
           <p class="card-desc">
             SAM/BAM/CRAM file manipulation &mdash; sorting, indexing, viewing, filtering.
             Standalone bundle including the required runtime DLLs.
@@ -211,12 +188,12 @@
           </ul>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/samtools-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
-            <a class="btn" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
+            <a class="btn" href="https://github.com/win-ngs/samtools-windows-bundle" target="_blank" rel="noopener">Repo</a>
           </div>
         </article>
 
         <article class="card">
-          <h3><a class="card-title-link" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">bcftools 1.23.1 (Windows bundle)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">bcftools 1.23.1 (redistribution)</a></h3>
           <p class="card-desc">
             VCF/BCF manipulation, filtering, and variant calling. Includes plugins and the
             runtime DLLs needed to run standalone on Windows.
@@ -230,12 +207,12 @@
           </ul>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/bcftools-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
-            <a class="btn" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
+            <a class="btn" href="https://github.com/win-ngs/bcftools-windows-bundle" target="_blank" rel="noopener">Repo</a>
           </div>
         </article>
 
         <article class="card">
-          <h3><a class="card-title-link" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">htslib 1.23.1 (Windows bundle)</a></h3>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">htslib 1.23.1 (redistribution)</a></h3>
           <p class="card-desc">
             Core C library for high-throughput sequencing data formats (SAM/BAM/CRAM/VCF/BCF).
             Ships the CLI utilities <code>bgzip</code>, <code>tabix</code>, <code>htsfile</code>,
@@ -250,7 +227,7 @@
           </ul>
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/htslib-windows-bundle/releases/tag/v1.23.1-windows-ucrt64" target="_blank" rel="noopener">Download v1.23.1</a>
-            <a class="btn" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">Bundle Repo</a>
+            <a class="btn" href="https://github.com/win-ngs/htslib-windows-bundle" target="_blank" rel="noopener">Repo</a>
           </div>
         </article>
       </div>
