@@ -16,6 +16,7 @@
         <a href="#rnaseq">Basic RNA-seq</a>
         <a href="#binaries">More Windows Builds</a>
         <a href="#external">External Tools</a>
+        <a href="#no-win">No Windows Support</a>
         <a href="#about">About</a>
         <a href="https://github.com/win-ngs/win-ngs.github.io" target="_blank" rel="noopener">GitHub</a>
       </nav>
@@ -242,10 +243,6 @@
           <span class="link-title">FastQC</span>
           <span class="link-desc">Read quality checks. Java-based; runs on Windows.</span>
         </a>
-        <a class="link-item" href="https://github.com/OpenGene/fastp" target="_blank" rel="noopener">
-          <span class="link-title">fastp</span>
-          <span class="link-desc">Fast read trimming and QC. <span class="tag">Build/WSL</span></span>
-        </a>
         <a class="link-item" href="http://www.usadellab.org/cms/?page=trimmomatic" target="_blank" rel="noopener">
           <span class="link-title">Trimmomatic</span>
           <span class="link-desc">Adapter and low-quality base trimming. Java-based.</span>
@@ -254,10 +251,6 @@
 
       <h3 class="subcat">Alignment</h3>
       <div class="link-list">
-        <a class="link-item" href="https://github.com/lh3/minimap2" target="_blank" rel="noopener">
-          <span class="link-title">minimap2</span>
-          <span class="link-desc">Fast aligner for both long and short reads. <span class="tag">Build/WSL</span></span>
-        </a>
         <a class="link-item" href="https://github.com/BenLangmead/bowtie2" target="_blank" rel="noopener">
           <span class="link-title">Bowtie2</span>
           <span class="link-desc">Short-read aligner with official Windows binaries.</span>
@@ -270,22 +263,14 @@
 
       <h3 class="subcat">SAM/BAM/VCF Manipulation</h3>
       <div class="link-list">
-        <a class="link-item" href="https://www.htslib.org/" target="_blank" rel="noopener">
-          <span class="link-title">samtools / bcftools / htslib</span>
-          <span class="link-desc">The de facto standard NGS data toolkit. <span class="tag">Build/WSL</span></span>
-        </a>
         <a class="link-item" href="https://broadinstitute.github.io/picard/" target="_blank" rel="noopener">
           <span class="link-title">Picard Tools</span>
           <span class="link-desc">SAM/BAM manipulation and metrics. Java-based.</span>
         </a>
       </div>
 
-      <h3 class="subcat">Variant Calling / Annotation</h3>
+      <h3 class="subcat">Variant Annotation</h3>
       <div class="link-list">
-        <a class="link-item" href="https://gatk.broadinstitute.org/" target="_blank" rel="noopener">
-          <span class="link-title">GATK</span>
-          <span class="link-desc">The go-to variant calling toolkit. Java core with native deps.</span>
-        </a>
         <a class="link-item" href="https://pcingola.github.io/SnpEff/" target="_blank" rel="noopener">
           <span class="link-title">SnpEff / SnpSift</span>
           <span class="link-desc">Variant annotation. Java-based.</span>
@@ -298,10 +283,6 @@
           <span class="link-title">IGV (Integrative Genomics Viewer)</span>
           <span class="link-desc">Visualizer for BAM/VCF/BED. Windows installer available.</span>
         </a>
-        <a class="link-item" href="https://ics.hutton.ac.uk/tablet/" target="_blank" rel="noopener">
-          <span class="link-title">Tablet</span>
-          <span class="link-desc">Lightweight read viewer. Windows-friendly.</span>
-        </a>
       </div>
 
       <h3 class="subcat">Build Environments / Runtimes</h3>
@@ -313,6 +294,43 @@
         <a class="link-item" href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener">
           <span class="link-title">WSL2</span>
           <span class="link-desc">The practical answer for running Linux-only tools.</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ Common Tools Not Supporting Windows ============ -->
+    <section id="no-win" class="card-section">
+      <h2>Common Tools Not Supporting Windows</h2>
+      <p class="section-lead">
+        Widely-used NGS tools that do not ship Windows binaries and are impractical to build
+        natively. Use <a href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener">WSL2</a>
+        or a Linux machine to run these.
+      </p>
+
+      <div class="link-list">
+        <a class="link-item" href="https://gatk.broadinstitute.org/" target="_blank" rel="noopener">
+          <span class="link-title">GATK</span>
+          <span class="link-desc">The go-to variant calling toolkit. Java core with Linux-only native dependencies.</span>
+        </a>
+        <a class="link-item" href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">
+          <span class="link-title">salmon</span>
+          <span class="link-desc">Fast and accurate transcript-level quantification from RNA-seq reads.</span>
+        </a>
+        <a class="link-item" href="https://umi-tools.readthedocs.io/" target="_blank" rel="noopener">
+          <span class="link-title">UMI-tools</span>
+          <span class="link-desc">Handling Unique Molecular Identifiers (UMIs): extraction, deduplication, grouping.</span>
+        </a>
+        <a class="link-item" href="https://htseq.readthedocs.io/" target="_blank" rel="noopener">
+          <span class="link-title">HTSeq</span>
+          <span class="link-desc">Python framework for NGS analysis; <code>htseq-count</code> is a standard for RNA-seq read counting.</span>
+        </a>
+        <a class="link-item" href="https://github.com/macs3-project/MACS" target="_blank" rel="noopener">
+          <span class="link-title">MACS</span>
+          <span class="link-desc">The most widely used peak caller for ChIP-seq and ATAC-seq.</span>
+        </a>
+        <a class="link-item" href="https://deeptools.readthedocs.io/" target="_blank" rel="noopener">
+          <span class="link-title">deepTools</span>
+          <span class="link-desc">Toolkit for exploring deep-sequencing data — coverage tracks, heatmaps, and visualization from BAM.</span>
         </a>
       </div>
     </section>
