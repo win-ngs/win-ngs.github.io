@@ -236,7 +236,7 @@
         Third-party NGS tools that run on Windows out of the box or ship an official Windows installer.
       </p>
 
-      <h3 class="subcat">QC / Preprocessing</h3>
+      <h3 class="subcat">Read Processing</h3>
       <div class="link-list">
         <a class="link-item" href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">
           <span class="link-title">FastQC</span>
@@ -252,57 +252,30 @@
         </a>
       </div>
 
-      <h3 class="subcat">Alignment</h3>
+      <h3 class="subcat">Alignment &amp; Downstream</h3>
       <div class="link-list">
         <a class="link-item" href="https://github.com/BenLangmead/bowtie2" target="_blank" rel="noopener">
           <span class="link-title">Bowtie2</span>
           <span class="link-desc">Short-read aligner with official Windows binaries.</span>
         </a>
-      </div>
-
-      <h3 class="subcat">SAM/BAM/VCF Manipulation</h3>
-      <div class="link-list">
         <a class="link-item" href="https://broadinstitute.github.io/picard/" target="_blank" rel="noopener">
           <span class="link-title">Picard Tools</span>
           <span class="link-desc">SAM/BAM manipulation and metrics. Java-based.</span>
         </a>
-      </div>
-
-      <h3 class="subcat">Variant Annotation</h3>
-      <div class="link-list">
         <a class="link-item" href="https://pcingola.github.io/SnpEff/" target="_blank" rel="noopener">
           <span class="link-title">SnpEff / SnpSift</span>
           <span class="link-desc">Variant annotation. Java-based.</span>
         </a>
-      </div>
-
-      <h3 class="subcat">Viewers / Visualization</h3>
-      <div class="link-list">
         <a class="link-item" href="https://igv.org/" target="_blank" rel="noopener">
           <span class="link-title">IGV (Integrative Genomics Viewer)</span>
           <span class="link-desc">Visualizer for BAM/VCF/BED. Windows installer available.</span>
         </a>
-      </div>
-
-      <h3 class="subcat">BigWig / BigBed Utilities</h3>
-      <div class="link-list">
         <a class="link-item" href="https://github.com/jackh726/bigtools" target="_blank" rel="noopener">
           <span class="link-title">bigtools</span>
           <span class="link-desc">Rust-based BigWig/BigBed CLI &mdash; conversion, summary stats, merging. Official Windows binary (MSVC).</span>
         </a>
       </div>
 
-      <h3 class="subcat">Build Environments / Runtimes</h3>
-      <div class="link-list">
-        <a class="link-item" href="https://www.msys2.org/" target="_blank" rel="noopener">
-          <span class="link-title">MSYS2</span>
-          <span class="link-desc">Build environment on Windows. Many NGS tools compile here.</span>
-        </a>
-        <a class="link-item" href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener">
-          <span class="link-title">WSL2</span>
-          <span class="link-desc">The practical answer for running Linux-only tools.</span>
-        </a>
-      </div>
     </section>
 
     <!-- ============ Common Tools Not Supporting Windows ============ -->
@@ -343,6 +316,10 @@
         <a class="link-item" href="https://pysam.readthedocs.io/" target="_blank" rel="noopener">
           <span class="link-title">Pysam</span>
           <span class="link-desc">Python wrapper for htslib/samtools. Upstream does not officially support Windows.</span>
+        </a>
+        <a class="link-item" href="https://daehwankimlab.github.io/hisat2/" target="_blank" rel="noopener">
+          <span class="link-title">HISAT2</span>
+          <span class="link-desc">Splice-aware aligner for RNA-seq. The source compiles on Windows, but the bundled Perl wrapper scripts do not run correctly.</span>
         </a>
       </div>
     </section>
