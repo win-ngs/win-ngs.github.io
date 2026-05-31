@@ -12,9 +12,9 @@
   --good-bg: rgba(63, 185, 80, 0.18);
   --good-fg: #7ee787;
   --good-border: rgba(63, 185, 80, 0.4);
-  --soon-bg: rgba(210, 153, 34, 0.18);
-  --soon-fg: #f0c674;
-  --soon-border: rgba(210, 153, 34, 0.4);
+  --soon-bg: rgba(245, 180, 50, 0.22);
+  --soon-fg: #ffd966;
+  --soon-border: #d49a1c;
   --radius: 8px;
   --max-width: 1080px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
@@ -37,9 +37,9 @@
     --good-bg: rgba(31, 136, 61, 0.10);
     --good-fg: #1a7f37;
     --good-border: rgba(31, 136, 61, 0.35);
-    --soon-bg: rgba(176, 113, 0, 0.10);
-    --soon-fg: #8a6d00;
-    --soon-border: rgba(176, 113, 0, 0.35);
+    --soon-bg: #fff4d6;
+    --soon-fg: #6b4d00;
+    --soon-border: #c89512;
   }
 }
 
@@ -265,17 +265,16 @@ code {
   font-weight: 600;
   white-space: nowrap;
   line-height: 1.4;
-  border: 1px solid;
 }
 .badge-good {
   background: var(--good-bg);
   color: var(--good-fg);
-  border-color: var(--good-border);
+  border: 1px solid var(--good-border);
 }
 .badge-soon {
   background: var(--soon-bg);
   color: var(--soon-fg);
-  border-color: var(--soon-border);
+  border: 1px solid var(--soon-border);
 }
 
 /* ---- Footer ---- */
