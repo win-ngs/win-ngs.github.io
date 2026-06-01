@@ -189,18 +189,20 @@
         </article>
 
         <article class="card">
-          <h3>HISAT2 (Windows patch)</h3>
-          <p class="card-badges">
-            <span class="badge-soon">Coming Soon</span>
-          </p>
+          <h3><a class="card-title-link" href="https://github.com/win-ngs/hisat2-windows-build" target="_blank" rel="noopener">HISAT2 2.2.2 (Win-NGS build)</a></h3>
           <p class="card-desc">
-            Splice-aware aligner for RNA-seq. Source compiles on Windows, but the bundled Perl
-            wrapper scripts need patching. Win-NGS patched build coming soon.
+            Splice-aware aligner for RNA-seq. Upstream Perl wrapper scripts replaced with
+            PowerShell equivalents so the toolchain runs natively on Windows.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Spliced alignment</li>
             <li><span class="meta-key">Upstream:</span> <a href="https://daehwankimlab.github.io/hisat2/" target="_blank" rel="noopener">daehwankimlab.github.io/hisat2</a></li>
+            <li><span class="meta-key">Built with:</span> MSYS2 (UCRT64)</li>
           </ul>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://github.com/win-ngs/hisat2-windows-build/releases/download/v2.2.2-windows-ucrt64/hisat2-2.2.2-patch-windows-ucrt64.zip" target="_blank" rel="noopener">Download v2.2.2</a>
+            <a class="btn" href="https://github.com/win-ngs/hisat2-windows-build" target="_blank" rel="noopener">Build Repo</a>
+          </div>
         </article>
 
         <article class="card">
