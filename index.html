@@ -107,9 +107,9 @@
       </div>
     </section>
 
-    <!-- ============ More Windows Builds & Bundles ============ -->
+    <!-- ============ More Windows Builds & Bundles provided by Win-NGS =========== -->
     <section id="binaries" class="card-section">
-      <h2>More Windows Builds &amp; Bundles</h2>
+      <h2>More Windows Builds &amp; Bundles provided by Win-NGS</h2>
       <p class="section-lead">
         Additional NGS tools we have built or redistributed for Windows, grouped by function.
         "Build" entries are compiled from source with MSYS2; "Redistribution" entries repackage
@@ -186,6 +186,36 @@
             <a class="btn btn-primary" href="https://github.com/win-ngs/kallisto-windows-build/releases" target="_blank" rel="noopener">Releases</a>
             <a class="btn" href="https://github.com/win-ngs/kallisto-windows-build" target="_blank" rel="noopener">Build Repo</a>
           </div>
+        </article>
+
+        <article class="card">
+          <h3>HISAT2 (Windows patch)</h3>
+          <p class="card-badges">
+            <span class="badge-soon">Coming Soon</span>
+          </p>
+          <p class="card-desc">
+            Splice-aware aligner for RNA-seq. Source compiles on Windows, but the bundled Perl
+            wrapper scripts need patching. Win-NGS patched build coming soon.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Spliced alignment</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://daehwankimlab.github.io/hisat2/" target="_blank" rel="noopener">daehwankimlab.github.io/hisat2</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>StringTie</h3>
+          <p class="card-badges">
+            <span class="badge-soon">Coming Soon</span>
+          </p>
+          <p class="card-desc">
+            Reference-guided transcript assembly and quantification from RNA-seq alignments.
+            Win-NGS build coming soon.
+          </p>
+          <ul class="meta">
+            <li><span class="meta-key">Role:</span> Transcript assembly / quantification</li>
+            <li><span class="meta-key">Upstream:</span> <a href="https://github.com/gpertea/stringtie" target="_blank" rel="noopener">gpertea/stringtie</a></li>
+          </ul>
         </article>
       </div>
 
@@ -289,6 +319,10 @@
 
       <h3 class="subcat">Read Processing</h3>
       <div class="link-list">
+        <a class="link-item" href="https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit" target="_blank" rel="noopener">
+          <span class="link-title">SRA Toolkit</span>
+          <span class="link-desc">NCBI's toolkit for downloading SRA archives and converting them to FASTQ (<code>prefetch</code>, <code>fasterq-dump</code>). Official Windows installer available.</span>
+        </a>
         <a class="link-item" href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">
           <span class="link-title">FastQC</span>
           <span class="link-desc">Read quality checks. Java-based; runs on Windows.</span>
@@ -355,10 +389,6 @@
         <a class="link-item" href="https://deeptools.readthedocs.io/" target="_blank" rel="noopener">
           <span class="link-title">deepTools</span>
           <span class="link-desc">Toolkit for exploring deep-sequencing data — coverage tracks, heatmaps, and visualization from BAM.</span>
-        </a>
-        <a class="link-item" href="https://daehwankimlab.github.io/hisat2/" target="_blank" rel="noopener">
-          <span class="link-title">HISAT2</span>
-          <span class="link-desc">Splice-aware aligner for RNA-seq. The source compiles on Windows, but the bundled Perl wrapper scripts do not run correctly.</span>
         </a>
       </div>
     </section>
