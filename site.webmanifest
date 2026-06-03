@@ -1,0 +1,14 @@
+{
+  "name": "Win-NGS — NGS Analysis Tools for Windows",
+  "short_name": "Win-NGS",
+  "description": "Portal for NGS (Next-Generation Sequencing) analysis tools that run natively on Windows.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
