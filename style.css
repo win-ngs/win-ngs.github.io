@@ -286,3 +286,34 @@ code {
   font-size: 0.9rem;
   text-align: center;
 }
+/* ===== Append these rules to your existing style.css ===== */
+
+/* Accessibility: skip-to-content link (hidden until keyboard-focused) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: #0d1117;
+  color: #fff;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* FAQ accordion */
+.faq details {
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.faq details[open] summary {
+  margin-bottom: 0.5rem;
+}
