@@ -284,18 +284,9 @@
             <li><span class="meta-key">Role:</span> Spliced alignment</li>
             <li><span class="meta-key">Upstream:</span> <a href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">alexdobin/STAR</a></li>
             <li><span class="meta-key">Built with:</span> MSYS2 (MSYS)</li>
+            <li><span class="meta-key">winget:</span> <code>winget install WinNGS.STAR</code> </li>
           </ul>
 
-          <p class="install-label">via winget <span class="badge-soon install-badge">pending review</span></p>
-          <div class="install-cmd">
-            <code class="install-cmd-code">winget install WinNGA.STAR</code>
-            <button class="install-cmd-copy" type="button" data-copy="winget install WinNGA.STAR" aria-label="Copy command">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="14" height="14">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/>
-              </svg>
-              <span class="copy-label">Copy</span>
-            </button>
-          </div>
 
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/star-windows-build/releases/download/v2.7.11b-windows/win-ngs-STAR-2.7.11b-windows-x86_64-msys.zip" target="_blank" rel="noopener">Download v2.7.11b</a>
@@ -367,8 +358,7 @@
         <article class="card">
           <h3><a class="card-title-link" href="https://github.com/win-ngs/minimap2-windows-build" target="_blank" rel="noopener">minimap2 2.31 (Win-NGS build)</a></h3>
           <p class="card-desc">
-            Versatile pairwise sequence aligner. The standard choice for long-read mapping
-            (PacBio, ONT) and a fast option for short-read alignment.
+            Long-read sequence aligner for PacBio and Nanopore reads.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Long / short-read alignment</li>
@@ -384,8 +374,7 @@
         <article class="card">
           <h3><a class="card-title-link" href="https://github.com/win-ngs/bwa-mem2-windows-build" target="_blank" rel="noopener">BWA-MEM2 2.3 (Win-NGS build)</a></h3>
           <p class="card-desc">
-            Faster reimplementation of the BWA-MEM short-read aligner.
-            Suited for DNA-seq, ChIP-seq, and ATAC-seq workflows on Windows.
+            Short-read aligner for genome sequencing, ATAC-seq, ChIP-seq, etc.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Short-read alignment</li>
@@ -401,8 +390,7 @@
         <article class="card">
           <h3><a class="card-title-link" href="https://github.com/win-ngs/hisat2-windows-build" target="_blank" rel="noopener">HISAT2 2.2.2 (Win-NGS build)</a></h3>
           <p class="card-desc">
-            Splice-aware aligner for RNA-seq. Upstream Perl wrapper scripts replaced with
-            PowerShell equivalents so the toolchain runs natively on Windows.
+            Splice-aware aligner for RNA-seq. Low memory requirements.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Spliced alignment</li>
@@ -419,7 +407,6 @@
           <h3><a class="card-title-link" href="https://github.com/win-ngs/kallisto-windows-build" target="_blank" rel="noopener">kallisto 0.52.0 (Win-NGS build)</a></h3>
           <p class="card-desc">
             Pseudoalignment-based transcript quantification from RNA-seq reads.
-            Fast, alignment-free abundance estimates for downstream differential-expression workflows.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> RNA-seq quantification</li>
@@ -435,11 +422,12 @@
         <article class="card">
           <h3><a class="card-title-link" href="https://github.com/tus-kondolab/iso2gene" target="_blank" rel="noopener">iso2gene 1.0.0 (in-house tool)</a></h3>
           <p class="card-desc">
-            C/C++ implementation of tximport-style transcript-to-gene aggregation.
-            Generates gene-level count matrices from kallisto output.
+            Windows-native tool for <strong>tximport</strong>-style transcript-to-gene aggregation.
+            Bridges kallisto output to FlashDEG.
           </p>
           <ul class="meta">
             <li><span class="meta-key">Role:</span> Transcript-to-gene aggregation</li>
+            <li><span class="meta-key">Official:</span> <a href="https://github.com/tus-kondolab/iso2gene" target="_blank" rel="noopener">tus-kondolab/iso2gene</a></li>
             <li><span class="meta-key">Built with:</span> MSVC (Visual Studio)</li>
           </ul>
           <div class="card-actions">
@@ -454,7 +442,7 @@
             Reference-guided transcript assembly and quantification from RNA-seq alignments.
           </p>
           <ul class="meta">
-            <li><span class="meta-key">Role:</span> Transcript assembly / quantification</li>
+            <li><span class="meta-key">Role:</span> Transcript quantification</li>
             <li><span class="meta-key">Upstream:</span> <a href="https://github.com/gpertea/stringtie" target="_blank" rel="noopener">gpertea/stringtie</a></li>
             <li><span class="meta-key">Built with:</span> MSYS2 (UCRT64)</li>
           </ul>
@@ -705,36 +693,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    document.addEventListener('click', function (e) {
-      var btn = e.target.closest('.install-cmd-copy');
-      if (!btn) return;
-      var cmd = btn.getAttribute('data-copy') || '';
-      var label = btn.querySelector('.copy-label');
-      var done = function () {
-        if (label) label.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(function () {
-          if (label) label.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 1500);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(cmd).then(done, function () { fallback(cmd, done); });
-      } else {
-        fallback(cmd, done);
-      }
-      function fallback(text, cb) {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); cb(); } catch (_) {}
-        document.body.removeChild(ta);
-      }
-    });
   </script>
 </body>
 </html>

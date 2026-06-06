@@ -277,64 +277,6 @@ code {
   border: 1px solid var(--soon-border);
 }
 
-/* ---- Install command (winget etc.) ---- */
-.install-label {
-  margin: 0.2rem 0 0.4rem;
-  font-size: 0.82rem;
-  color: var(--fg-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.install-badge {
-  font-size: 0.7rem;
-  padding: 0.05em 0.5em;
-}
-.install-cmd {
-  display: flex;
-  align-items: stretch;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  margin: 0 0 0.8rem;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  overflow: hidden;
-}
-.install-cmd-code {
-  flex: 1;
-  padding: 0.45em 0.7em;
-  background: transparent;
-  border: 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  color: var(--fg);
-  align-self: center;
-}
-.install-cmd-copy {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-  border: 0;
-  border-left: 1px solid var(--border);
-  background: transparent;
-  color: var(--fg-muted);
-  cursor: pointer;
-  padding: 0 0.75em;
-  font-size: 0.8rem;
-  font-family: var(--font-sans);
-  transition: background 0.12s, color 0.12s;
-  white-space: nowrap;
-}
-.install-cmd-copy:hover {
-  background: var(--bg-card);
-  color: var(--accent);
-}
-.install-cmd-copy svg { flex-shrink: 0; }
-.install-cmd-copy.copied {
-  color: var(--good-fg);
-}
-
 /* ---- Footer ---- */
 .site-footer {
   margin-top: 4rem;
