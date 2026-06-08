@@ -15,9 +15,15 @@
   --soon-bg: rgba(245, 180, 50, 0.22);
   --soon-fg: #ffd966;
   --soon-border: #d49a1c;
-  --inhouse-bg: rgba(167, 139, 250, 0.20);
-  --inhouse-fg: #c4b5fd;
-  --inhouse-border: #8b5cf6;
+  --inhouse-bg: rgba(244, 114, 182, 0.20);
+  --inhouse-fg: #fbcfe8;
+  --inhouse-border: #ec4899;
+  --port-bg: rgba(0, 188, 242, 0.18);
+  --port-fg: #7fdbff;
+  --port-border: #00bcf2;
+  --repack-bg: rgba(148, 163, 184, 0.20);
+  --repack-fg: #cbd5e1;
+  --repack-border: #94a3b8;
   --radius: 8px;
   --max-width: 1080px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
@@ -43,9 +49,15 @@
     --soon-bg: #fff4d6;
     --soon-fg: #6b4d00;
     --soon-border: #c89512;
-    --inhouse-bg: #ede4ff;
-    --inhouse-fg: #5b21b6;
-    --inhouse-border: #8b5cf6;
+    --inhouse-bg: #fce7f3;
+    --inhouse-fg: #9d174d;
+    --inhouse-border: #db2777;
+    --port-bg: #d8f3ff;
+    --port-fg: #006fa1;
+    --port-border: #00aedb;
+    --repack-bg: #e2e8f0;
+    --repack-fg: #475569;
+    --repack-border: #94a3b8;
   }
 }
 
@@ -280,7 +292,9 @@ code {
 }
 .badge-good,
 .badge-soon,
-.badge-inhouse {
+.badge-inhouse,
+.badge-port,
+.badge-repack {
   display: inline-block;
   padding: 0.15em 0.6em;
   border-radius: 999px;
@@ -303,6 +317,16 @@ code {
   background: var(--inhouse-bg);
   color: var(--inhouse-fg);
   border: 1px solid var(--inhouse-border);
+}
+.badge-port {
+  background: var(--port-bg);
+  color: var(--port-fg);
+  border: 1px solid var(--port-border);
+}
+.badge-repack {
+  background: var(--repack-bg);
+  color: var(--repack-fg);
+  border: 1px solid var(--repack-border);
 }
 
 /* ---- Footer ---- */
