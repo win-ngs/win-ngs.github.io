@@ -218,6 +218,20 @@ code {
   color: #ffffff;
   text-decoration: none;
 }
+.btn-outline {
+  background: transparent;
+  border-color: #1f7ae0;
+  color: #1f7ae0;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+.btn-outline:hover {
+  background: rgba(31, 122, 224, 0.10);
+  border-color: #3a8dec;
+  color: #3a8dec;
+  text-decoration: none;
+}
 
 /* ---- Link list (external tools) ---- */
 .link-list {
