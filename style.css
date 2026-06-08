@@ -15,6 +15,9 @@
   --soon-bg: rgba(245, 180, 50, 0.22);
   --soon-fg: #ffd966;
   --soon-border: #d49a1c;
+  --inhouse-bg: rgba(167, 139, 250, 0.20);
+  --inhouse-fg: #c4b5fd;
+  --inhouse-border: #8b5cf6;
   --radius: 8px;
   --max-width: 1080px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
@@ -40,6 +43,9 @@
     --soon-bg: #fff4d6;
     --soon-fg: #6b4d00;
     --soon-border: #c89512;
+    --inhouse-bg: #ede4ff;
+    --inhouse-fg: #5b21b6;
+    --inhouse-border: #8b5cf6;
   }
 }
 
@@ -203,6 +209,8 @@ code {
   border-color: #1f7ae0;
   color: #ffffff;
   font-weight: 600;
+  min-width: 80px;
+  text-align: center;
 }
 .btn-primary:hover {
   background: #3a8dec;
@@ -257,7 +265,8 @@ code {
   line-height: 1;
 }
 .badge-good,
-.badge-soon {
+.badge-soon,
+.badge-inhouse {
   display: inline-block;
   padding: 0.15em 0.6em;
   border-radius: 999px;
@@ -275,6 +284,11 @@ code {
   background: var(--soon-bg);
   color: var(--soon-fg);
   border: 1px solid var(--soon-border);
+}
+.badge-inhouse {
+  background: var(--inhouse-bg);
+  color: var(--inhouse-fg);
+  border: 1px solid var(--inhouse-border);
 }
 
 /* ---- Footer ---- */
