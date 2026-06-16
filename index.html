@@ -281,9 +281,13 @@
           <ul class="meta">
             <li><span class="meta-key">Origin:</span> <a href="https://github.com/alexdobin/STAR" target="_blank" rel="noopener">alexdobin/STAR</a></li>
             <li><span class="meta-key">Built with:</span> MSYS2 (MSYS)</li>
-            <li><span class="meta-key">winget:</span> <code>winget install WinNGS.STAR</code> </li>
           </ul>
 
+
+          <div class="install-cmd">
+            <code class="install-cmd-code">winget install WinNGS.STAR</code>
+            <button class="install-cmd-copy" type="button" data-copy="winget install WinNGS.STAR" aria-label="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="14" height="14"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg></button>
+          </div>
 
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/star-windows-build/releases/download/v2.7.11b-windows-r4/win-ngs-STAR-2.7.11b-windows-x86_64-msys.msi" target="_blank" rel="noopener">Installer</a>
@@ -298,8 +302,12 @@
           </p>
           <ul class="meta">
             <li><span class="meta-key">Origin:</span> <a href="https://subread.sourceforge.net/" target="_blank" rel="noopener">Subread</a></li>
-            <li><span class="meta-key">winget:</span> <code>winget install WinNGS.featureCounts</code></li>
           </ul>
+          <div class="install-cmd">
+            <code class="install-cmd-code">winget install WinNGS.featureCounts</code>
+            <button class="install-cmd-copy" type="button" data-copy="winget install WinNGS.featureCounts" aria-label="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="14" height="14"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg></button>
+          </div>
+
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/win-ngs/featurecounts-windows-exe/releases/download/v2.1.1-windows-x86_64/win-ngs-featureCounts-2.1.1-windows-x86_64.msi" target="_blank" rel="noopener">Installer</a>
             <a class="btn btn-outline" href="https://github.com/win-ngs/featurecounts-windows-exe/releases/download/v2.1.1-windows-x86_64/featureCounts-2.1.1-windows-x86_64.zip" target="_blank" rel="noopener">ZIP file</a>
@@ -314,8 +322,12 @@
           <ul class="meta">
             <li><span class="meta-key">Official:</span> <a href="https://github.com/tus-kondolab/flashdeg" target="_blank" rel="noopener">tus-kondolab/flashdeg</a> </li>
             <li><span class="meta-key">Built with:</span> MSVC (Visual Studio)</li>
-            <li><span class="meta-key">winget:</span> <code>winget install WinNGS.FlashDEG</code></li>
           </ul>
+          <div class="install-cmd">
+            <code class="install-cmd-code">winget install WinNGS.FlashDEG</code>
+            <button class="install-cmd-copy" type="button" data-copy="winget install WinNGS.FlashDEG" aria-label="Copy command"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="14" height="14"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg></button>
+          </div>
+
           <div class="card-actions">
             <a class="btn btn-primary" href="https://github.com/tus-kondolab/flashdeg/releases/download/v1.1.0/flashdeg-1.1.0-windows-x86_64.msi" target="_blank" rel="noopener">Installer</a>
             <a class="btn btn-outline" href="https://github.com/tus-kondolab/flashdeg/releases/download/v1.1.0/flashdeg-1.1.0-windows-x86_64.zip" target="_blank" rel="noopener">ZIP file</a>
@@ -683,6 +695,31 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.install-cmd-copy');
+      if (!btn) return;
+      var cmd = btn.getAttribute('data-copy') || '';
+      var done = function () {
+        btn.classList.add('copied');
+        setTimeout(function () { btn.classList.remove('copied'); }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(cmd).then(done, function () { fallback(cmd, done); });
+      } else {
+        fallback(cmd, done);
+      }
+      function fallback(text, cb) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); cb(); } catch (_) {}
+        document.body.removeChild(ta);
+      }
+    });
   </script>
 </body>
 </html>

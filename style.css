@@ -329,6 +329,49 @@ code {
   border: 1px solid var(--repack-border);
 }
 
+/* ---- Install command (winget etc.) ---- */
+.install-cmd {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 0 0 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  overflow: hidden;
+}
+.install-cmd-code {
+  flex: 1;
+  padding: 0.45em 0.7em;
+  background: transparent;
+  border: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  color: var(--fg);
+  align-self: center;
+}
+.install-cmd-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-left: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-muted);
+  cursor: pointer;
+  padding: 0 0.7em;
+  transition: background 0.12s, color 0.12s;
+}
+.install-cmd-copy:hover {
+  background: var(--bg-card);
+  color: var(--accent);
+}
+.install-cmd-copy svg { flex-shrink: 0; }
+.install-cmd-copy.copied {
+  color: var(--good-fg);
+}
+
 /* ---- Footer ---- */
 .site-footer {
   margin-top: 4rem;
