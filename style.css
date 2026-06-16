@@ -343,11 +343,13 @@ code {
 }
 .install-cmd-code {
   flex: 1;
+  min-width: 0;
   padding: 0.45em 0.7em;
   background: transparent;
   border: 0;
   white-space: nowrap;
-  overflow-x: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: var(--fg);
   align-self: center;
 }
